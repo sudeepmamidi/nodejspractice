@@ -15,6 +15,10 @@ var userdetails = [];
 app.get("/",(req,res)=>{
     res.json(userdetails); 
 })
+//get method using query string
+app.get("/",(req,res)=>{
+    res.send(req.query.name+" "+req.query.email);
+});
 //post method
 app.post("/signup",(req,res)=>{
     var userobj ={};
